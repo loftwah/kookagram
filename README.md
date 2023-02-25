@@ -1,8 +1,8 @@
 # KookaGram
 
-KookaGram is a self-hosted and open-source social media management application designed to help users manage and schedule their social media posts. With KookaGram, users can easily schedule and manage their posts, view analytics, and bill users through the Stripe API. The application allows users to post to Facebook, LinkedIn, Twitter, Instagram, and TikTok, and it includes a queue for scheduled posts, a section for previous posts and post management, and a scheduler for bulk content creation scheduled in the future. The application also supports importing from CSV, XLS, and common file formats and posting automatically from RSS feeds. KookaGram is built using Appwrite for the backend and Flutter for the frontend and is named after the iconic Australian bird, the Kookaburra.
-
 ![KookaGram](https://user-images.githubusercontent.com/19922556/221359849-2b0b06ca-4f5b-4117-9ed2-6ee981d065a2.jpg)
+
+KookaGram is a self-hosted and open-source social media management application designed to help users manage and schedule their social media posts. With KookaGram, users can easily schedule and manage their posts, view analytics, and bill users through the Stripe API. The application allows users to post to Facebook, LinkedIn, Twitter, Instagram, and TikTok, and it includes a queue for scheduled posts, a section for previous posts and post management, and a scheduler for bulk content creation scheduled in the future. The application also supports importing from CSV, XLS, and common file formats and posting automatically from RSS feeds. KookaGram is built using Appwrite for the backend and Flutter for the frontend and is named after the iconic Australian bird, the Kookaburra.
 
 ## Features
 
