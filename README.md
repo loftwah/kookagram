@@ -52,16 +52,50 @@ The application will use a NoSQL database for storing user data, social media ac
 
 The application can be deployed to a cloud platform such as AWS, Google Cloud, or DigitalOcean. It can also be deployed on a self-hosted server or a VPS.
 
-## Getting Started
+## REST API
 
-To get started with the application, follow these steps:
+KookaGram's REST API allows you to access the backend through HTTP requests without the need for an SDK. Each endpoint in the API represents a specific operation on a specific resource. The REST API is authenticated with API keys instead of account sessions, and JWT authentication is used for server applications to act on behalf of a user.
 
-1. Clone the repository and install the required dependencies.
-2. Set up your Appwrite backend and create a database for the application.
-3. Configure your social media accounts either locally or through the UI.
-4. Schedule your posts using the CLI or web UI.
-5. View your analytics and modify your schedule as needed.
+## Query Methods
 
-## Conclusion
+Appwrite's SDKs provide a Query class to generate query strings. When using Appwrite without an SDK, you can template your own strings with the format below.
 
-This social media management application is designed to be a simple, self-hosted, and open source solution for managing and scheduling social media posts. With its CLI and web UI, users can easily schedule and manage their posts, view analytics, and bill users through the Stripe API.
+Query strings are passed to Appwrite using the queries parameter. You can attach multiple query strings by including the array parameter multiple times in the query string: queries\[\]="..."&queries\[\]="..."
+
+| Query Method | Query String |
+| --- | --- |
+| equal | `equal("attribute", [value])` |
+| notEqual | `notEqual("attribute", [value])` |
+| lessThan | `lessThan("attribute", [value])` |
+| lessThanEqual | `lessThanEqual("attribute", [value])` |
+| greaterThan | `greaterThan("attribute", [value])` |
+| greaterThanEqual | `greaterThanEqual("attribute", [value])` |
+| search | `search("attribute", [value1])` |
+| orderDesc | `orderDesc("attribute")` |
+| orderAsc | `orderAsc("attribute")` |
+| cursorAfter | `cursorAfter("documentId")` |
+| cursorBefore | `cursorBefore("documentId")` |
+| limit | `limit(0)` |
+| offset | `offset(0)` |
+
+Best Practice When using greater than, greater than or equal to, less than, or less than or equal to, it is not recommended to pass in multiple values. While the API will accept multiple values and return results with or logic, it's best practice to pass in only one value for performance reasons.
+
+OpenAPI and Swagger Specs Appwrite provides a full REST API specification in the OpenAPI 3 and Swagger 2 formats every release. These can be accessed through Appwrite's GitHub repository and rendered using a variety of parsers and tools.
+
+Find the REST API specification for your Appwrite version
+
+## Contributing
+
+We welcome contributions to KookaGram! To contribute to the project, please follow these steps:
+
+1. Fork the repository and clone it to your local machine.
+2. Create a new branch for your feature or bug fix.
+3. Write your code and commit your changes. Be sure to include tests for your code.
+4. Push your branch to your fork and submit a pull request.
+5. One of the maintainers will review your pull request and provide feedback.
+
+Please note that all contributors are expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## License
+
+This project is licensed under the BSD-3 License - see the [LICENSE](LICENSE) file for details.
